@@ -2,28 +2,29 @@
 
 
 var URL = window.location.hostname;
-var updateView = async (button) => {
-    //Code Query
+
+var updateView =  async (button) => {
+
     if (button.dataset.querytype == 'by_course_code') {
         let queryvalue = document.querySelector('#codeQuery').value;
         api = `https://${URL}/api/by_course_code/${queryvalue}`;
     }
-    //Title Query
+  
     if (button.dataset.querytype == 'by_title') {
         let queryvalue = document.querySelector('#titleQuery').value;
         api = `https://${URL}/api/by_title/${queryvalue}`;
     }
-    //Instructor Query
+
     if (button.dataset.querytype == 'by_instructor') {
         let queryvalue = document.querySelector('#instructorQuery').value;
         api = `https://${URL}/api/by_instructor/${queryvalue}`;
     }
-    //Level Query
+
     if (button.dataset.querytype == 'by_level') {
         let queryvalue = document.querySelector('#levelQuery').value;
         api = `https://${URL}/api/by_level/${queryvalue}`;
     }
-    //Combined Query
+
     if (button.dataset.querytype == 'combined_query') {
         let queryName = document.querySelector('#nameQuery').value;
         let queryLevel = document.querySelector('#levQuery').value;
@@ -35,7 +36,7 @@ var updateView = async (button) => {
    
 } 
 
-//Renders view on HTML page/
+//HTML page/
 var render_view = (model) => {
     var source = document.querySelector("#show_results_view").innerHTML;
     var template = Handlebars.compile(source);

@@ -1,0 +1,17 @@
+{
+  "name": "cus1172_final",
+  "version": "1.0.0",
+  "description": "Deployment of a restful api",
+  "main": "restAPI_dev.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm install fs",
+    "start": "node restAPI_dev.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
